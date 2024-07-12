@@ -1,74 +1,74 @@
 ///PageRoll
-import 'package:animation/RolledPage/home_view.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
-
-void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.indigo,
-        hintColor: Colors.pinkAccent,
-      ),
-      home: HomeView(),
-    ),
-  );
-}
+// import 'package:animation/RolledPage/home_view.dart';
+// import 'package:flutter/material.dart';
+// import 'package:flutter/widgets.dart';
+//
+//
+// void main() {
+//   runApp(
+//     MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primaryColor: Colors.indigo,
+//         hintColor: Colors.pinkAccent,
+//       ),
+//       home: HomeView(),
+//     ),
+//   );
+// }
 
 
 
 
 ///BurningPage
-// import 'package:animation/RolledPage/home_view.dart';
-// import 'package:flutter/material.dart';
-//
-// import 'BurningPaper/burning_paper.dart';
-//
-//
-// void main(){
-//    runApp(MyApp());
-// }
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-//
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-//       theme: ThemeData(
-//
-//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-//         useMaterial3: true,
-//       ),
-//       home:  Stack(
-//           children: <Widget>[
-//             Container(
-//               decoration: BoxDecoration(
-//                   gradient: RadialGradient(
-//                       colors: [Colors.orange, Colors.orangeAccent]
-//                   )
-//               ),
-//               child: Center(
-//                   child: Text(
-//                     "Burning\nPaper\nEffect",
-//                     style: TextStyle(fontSize: 48, color: Colors.white),
-//                     textAlign: TextAlign.center,
-//                   )
-//               ),
-//             ),
-//             IgnorePointer(
-//                 child:BurningPaper(
-//                   //color: Theme.of(context).accentColor
-//                 )
-//             )
-//           ]
-//       ),
-//     );
-//   }
-// }
+import 'package:animation/RolledPage/home_view.dart';
+import 'package:flutter/material.dart';
+
+import 'BurningPaper/burning_paper.dart';
+
+
+void main(){
+   runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home:  Stack(
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                      colors: [Colors.orange, Colors.orangeAccent]
+                  )
+              ),
+              child: Center(
+                  child: Text(
+                    "Burning\nPaper\nEffect",
+                    style: TextStyle(fontSize: 48, color: Colors.white),
+                    textAlign: TextAlign.center,
+                  )
+              ),
+            ),
+            IgnorePointer(
+                child:BurningPaper(
+                  //color: Theme.of(context).accentColor
+                )
+            )
+          ]
+      ),
+    );
+  }
+}
 
 
 
