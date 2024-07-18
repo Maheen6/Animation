@@ -106,7 +106,7 @@ class _PageTurnImageState extends State<PageTurnImage> {
           image: _imageInfo!.image,
           backgroundColor: widget.backgroundColor,
         ),
-        size: Size.infinite,
+        size: Size.fromHeight(MediaQuery.of(context).size.height),
       );
     } else {
       return const SizedBox();

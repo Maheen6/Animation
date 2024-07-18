@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      value: 0.5,
+      value: 0,
       duration: const Duration(milliseconds: 450),
       vsync: this,
     );
@@ -50,40 +50,45 @@ class _MyHomePageState extends State<MyHomePage>
         title: const Text('title'),
       ),
       body: Material(
-        child: GestureDetector(
-          behavior: HitTestBehavior.opaque,
-          onTap: _onTap,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              const PageTurnImage(
-                amount: AlwaysStoppedAnimation(1.0),
-                image: NetworkImage(
-                  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/John_Masefield.djvu/page10-1024px-John_Masefield.djvu.jpg',
+        child: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: _onTap,
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                const PageTurnImage(
+                  amount: AlwaysStoppedAnimation(1.0),
+                  image: NetworkImage(
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/John_Masefield.djvu/page10-1024px-John_Masefield.djvu.jpg',
+                  ),
                 ),
-              ),
-              PageTurnWidget(
-                amount: _controller!,
-                child: const AlicePage(),
-              ),
-              Positioned(
-                left: 0.0,
-                right: 0.0,
-                bottom: 0.0,
-                height: 48.0,
-                child: AnimatedBuilder(
-                  animation: _controller!,
-                  builder: (context, child) {
-                    return Slider(
-                      value: _controller!.value,
-                      onChanged: (double value) {
-                        _controller?.value = value;
-                      },
-                    );
-                  },
-                ),
-              ),
-            ],
+                // PageTurnWidget(
+                //   amount: _controller!,
+                //   child: const AlicePage(),
+                // ),
+                // Positioned(
+                //   left: 0.0,
+                //   right: 0.0,
+                //   bottom: 0.0,
+                //   height: 48.0,
+                //   child: AnimatedBuilder(
+                //     animation: _controller!,
+                //     builder: (context, child) {
+                //       return Slider(
+                //         min: 0,
+                //         max: 1,
+                //         value: _controller!.value,
+                //         onChanged: (double value) {
+                //           _controller?.value = value;
+                //         },
+                //       );
+                //     },
+                //   ),
+                // ),
+              ],
+            ),
           ),
         ),
       ),

@@ -1,3 +1,8 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import 'FlipPage/flip_page.dart';
+
 ///PageRoll
 // import 'package:animation/RolledPage/home_view.dart';
 // import 'package:flutter/material.dart';
@@ -72,24 +77,37 @@
 
 
 ///Page Turn
-import 'dart:ui' as ui;
+// import 'dart:ui' as ui;
+//
+// import 'package:flutter/material.dart';
+// import 'package:flutter/widgets.dart';
+//
+// import 'FlipPage/flip_page.dart';
+// import 'PageCurl/home_page.dart';
+//
+// void main() {
+//   runApp(
+//     MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primaryColor: Colors.indigo,
+//         hintColor: Colors.pinkAccent,
+//       ),
+//       home: MyHomePage(),
+//     ),
+//   );
+// }
 
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-import 'PageCurl/home_page.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.indigo,
-        hintColor: Colors.pinkAccent,
-      ),
-      home: MyHomePage(),
-    ),
-  );
+///FlipPage
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: FlipBookExample(),
+    );
+  }
 }
 
 
