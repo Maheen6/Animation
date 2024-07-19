@@ -22,7 +22,7 @@ class RolledPage extends StatelessWidget {
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0XFFBFBFBF), Colors.white, Color(0xFFBFBFBF)])),
+              colors: [Color(0xFFFFFFCC), Colors.white, Color(0xFFFFFFCC)])),
     );
   }
 }

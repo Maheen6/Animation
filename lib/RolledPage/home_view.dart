@@ -61,7 +61,7 @@ class _HomeViewState extends State<HomeView> {
     final scrollViewPadding = deviceHeight - (topPadding + _titleViewHeight);
     print(_currentPageCount);
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(0xFFF48fb1),
       body: Column(children: [
         TitleView(
           title: "Paper roll scroll",
